@@ -17,7 +17,7 @@ dependencies {
 
 normalization {
   runtimeClasspath {
-    ignore("build-info.properties")
+    ignore("**/build-info.properties")
   }
 }
 
