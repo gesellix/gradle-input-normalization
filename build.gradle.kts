@@ -15,6 +15,12 @@ dependencies {
   testImplementation("org.spockframework:spock-core:1.3-groovy-2.5")
 }
 
+normalization {
+  runtimeClasspath {
+    ignore("build-info.properties")
+  }
+}
+
 tasks {
   val buildInfoTask = create("buildInfo") {
     val buildInfoFile = file("${buildDir}/resources/main/META-INF/build-info.properties")
